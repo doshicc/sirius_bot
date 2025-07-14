@@ -37,3 +37,4 @@
 - Автор: Дон Дарья
 - Email: gimnasterius@mail.ru
 - Telegram: @C4_H6_O6
+- Видеопрезентация проекта: [ссылка на видео](https://cloud.mail.ru/public/W7Fq/749ge3K6M)
