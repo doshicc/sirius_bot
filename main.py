@@ -56,7 +56,7 @@ def add_new_reminder(message: Message) -> None:
     if match:
         event_name, event_date, event_time = match.groups()
         # Если время было введено правильно.
-        if check_time(f"{event_date} {event_time}"):
+        if check_time(f"{event_date} {event_time}") == True:
             insert_row(message.chat.id, event_name, event_date, event_time)
 
             # Создаем напоминание.
@@ -73,6 +73,7 @@ def add_new_reminder(message: Message) -> None:
         # Если назначенное событие состоится меньше, чем через час.
         elif check_time(f"{event_date} {event_time}") == INCORRECT_DATE_3:
             insert_row(message.chat.id, event_name, event_date, event_time)
+            bot.send_message(message.chat.id, INCORRECT_DATE_3)
 
         else:
             logging.info(f'Некорректно введена дата {message.chat.id}')
